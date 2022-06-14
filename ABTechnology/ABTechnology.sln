@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32519.111
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "ABTechnology", "ABTechnology\ABTechnology.shproj", "{5A04E374-0844-4004-A033-BD966239912B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AB Libaries", "AB Libaries", "{1DC865EC-FC47-453A-9B58-DFD0861EB08F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AB Software", "AB Software", "{60857A12-EC25-4C22-89C8-E639CA16EB80}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Albert", "Albert\Albert.csproj", "{E3F41F74-265F-48C0-90BE-0BF1825E2225}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Albert.Win32", "Albert.Win32\Albert.Win32.csproj", "{2C8630FE-EC06-4042-AB63-E636A79CECE6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ABWorkPad", "ABWorkPad\ABWorkPad.csproj", "{B90E077B-5CF3-4E66-B294-4F49B75CB1F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Albert.Data", "Albert.Data\Albert.Data.csproj", "{A513E0B0-F33A-4ECC-8998-E8748FD59E2F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E3F41F74-265F-48C0-90BE-0BF1825E2225}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3F41F74-265F-48C0-90BE-0BF1825E2225}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3F41F74-265F-48C0-90BE-0BF1825E2225}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3F41F74-265F-48C0-90BE-0BF1825E2225}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C8630FE-EC06-4042-AB63-E636A79CECE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C8630FE-EC06-4042-AB63-E636A79CECE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C8630FE-EC06-4042-AB63-E636A79CECE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C8630FE-EC06-4042-AB63-E636A79CECE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B90E077B-5CF3-4E66-B294-4F49B75CB1F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B90E077B-5CF3-4E66-B294-4F49B75CB1F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B90E077B-5CF3-4E66-B294-4F49B75CB1F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B90E077B-5CF3-4E66-B294-4F49B75CB1F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A513E0B0-F33A-4ECC-8998-E8748FD59E2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A513E0B0-F33A-4ECC-8998-E8748FD59E2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A513E0B0-F33A-4ECC-8998-E8748FD59E2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A513E0B0-F33A-4ECC-8998-E8748FD59E2F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E3F41F74-265F-48C0-90BE-0BF1825E2225} = {1DC865EC-FC47-453A-9B58-DFD0861EB08F}
+		{2C8630FE-EC06-4042-AB63-E636A79CECE6} = {1DC865EC-FC47-453A-9B58-DFD0861EB08F}
+		{B90E077B-5CF3-4E66-B294-4F49B75CB1F5} = {60857A12-EC25-4C22-89C8-E639CA16EB80}
+		{A513E0B0-F33A-4ECC-8998-E8748FD59E2F} = {1DC865EC-FC47-453A-9B58-DFD0861EB08F}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CBD42559-C64C-43CA-9319-0E0FC389B7E1}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		ABTechnology\ABTechnology.projitems*{5a04e374-0844-4004-a033-bd966239912b}*SharedItemsImports = 13
+	EndGlobalSection
+EndGlobal
