@@ -1,0 +1,50 @@
+﻿<local:PowerView x:Class="Controls.SketchPadControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:c="clr-namespace:Albert.Win32.Controls;assembly=Albert.Win32"
+			 xmlns:local="clr-namespace:Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="auto" />
+			<RowDefinition />
+		</Grid.RowDefinitions>
+		<!-- Toolbar Tray -->
+		<ToolBarTray>
+			<ToolBar DataContext="{StaticResource builder}">
+				<ComboBox x:Name="formatComboBox"  ItemsSource="{Binding PresetFormats}" ItemTemplate="{StaticResource presetSizes}">
+					<ComboBox.ToolTip>
+						<TextBlock>
+							<Run FontWeight="Black" Text="Format ComboBox" />
+							<LineBreak />
+							<Run>Use this ComboBox to determine the size of your SKetch</Run>
+						</TextBlock>
+					</ComboBox.ToolTip>
+				</ComboBox>
+				<ComboBox x:Name="themeComboBox" ItemTemplate="{StaticResource drawCanvas}" ItemsSource="{Binding PresetDrawCanvasList}"  >
+					<TextBlock>
+							<Run FontWeight="Black" Text="Theme ComboBox" />
+							<LineBreak />
+							<Run>Use this ComboBox to determine the theme of your SKetch</Run>
+					</TextBlock>
+					</ComboBox.ToolTip>
+				</ComboBox>
+			</ToolBar>
+		</ToolBarTray>
+		<!-- Work Area -->
+		<Grid Grid.Row="1" x:Name="workGrid">
+			<c:ZoomBox x:Name="canvasZoomBox">
+				<Grid x:Name="canvasGrid">
+					<c:DrawCanvas x:Name="drawCanvas" />
+				</Grid>
+			</c:ZoomBox>
+			
+		</Grid>
+		
+		
+            
+    </Grid>
+</local:PowerView>

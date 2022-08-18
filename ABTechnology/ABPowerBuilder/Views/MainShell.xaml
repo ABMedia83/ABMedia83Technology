@@ -1,0 +1,165 @@
+﻿<local:PowerShell x:Class="Views.MainShell"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:w="clr-namespace:Albert.Win32;assembly=Albert.Win32"
+		xmlns:c="clr-namespace:Albert.Win32.Controls;assembly=Albert.Win32"
+		xmlns:local="clr-namespace:Controls"
+	   Title="{Binding Title}"
+        mc:Ignorable="d"
+      Height="450" Width="800">
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="auto" />
+			<RowDefinition  />
+			<RowDefinition Height="auto" />
+		</Grid.RowDefinitions>
+
+		<!-- Main Menu -->
+		<Menu x:Name="mainMenu">
+			<MenuItem Header="File">
+				<MenuItem ToolTip="Create A new Project" Command="New" />
+				<MenuItem ToolTip="Open a File" Command="Open" />
+				<MenuItem ToolTip="Save a Document" Command="Save" />
+				<MenuItem ToolTip="Save Document as" Command="w:DesktopCommands.SaveAs" />
+				<Separator />
+				<MenuItem ToolTip="Import a Documnet" Command="w:DesktopCommands.Import" />
+				<MenuItem ToolTip="Export a document" Command="w:DesktopCommands.Export" />
+				<Separator />
+				<MenuItem Command="w:DesktopCommands.Quit" />
+
+
+
+
+
+			</MenuItem>
+			<MenuItem Header="Edit">
+				<MenuItem ToolTip="Cut Selection" Command="Cut" />
+				<MenuItem ToolTip="Copy Selection" Command="Copy" />
+				<MenuItem ToolTip="Paste Selection" Command="Paste" />
+				<Separator />
+				<MenuItem ToolTip="Selec All" Command="SelectAll" />
+			</MenuItem>
+			<MenuItem Header="View">
+				<MenuItem x:Name="mnuHideStatusBar" Click="mnuHideStatusBar_Click" ToolTip="Hide or show the Status Bar" IsCheckable="True" Header="Hide Status Bar" />
+			</MenuItem>
+			<MenuItem Header="Tools">
+				<MenuItem ToolTip="Check your Logs" Command="w:DesktopCommands.LogInfo" />
+			</MenuItem>
+			<MenuItem ToolTip="Select Builder Mode"  Header="Mode">
+				<MenuItem   Tag="Code" Click="Mode_Click" Header="Codebook" >
+					<MenuItem.ToolTip>
+						<TextBlock TextWrapping="Wrap" Width="200">
+							<Run FontWeight="Black" Text="Codebook" />
+							<LineBreak /> 
+							<Run>The Codebook is designed to deal with the code I buuld for myself  and other people </Run>
+						</TextBlock>
+					</MenuItem.ToolTip>
+				</MenuItem>
+				<MenuItem   Tag="Media" Click="Mode_Click" Header="MediaBook" >
+					<MenuItem.ToolTip>
+						<TextBlock TextWrapping="Wrap" Width="200">
+							<Run FontWeight="Black" Text="MediaBook" />
+							<LineBreak /> 
+							<Run>The MediaBook is designed to deal with the images, video's and other media </Run>
+						</TextBlock>
+					</MenuItem.ToolTip>
+				</MenuItem>
+				<MenuItem Header="Notebook" Tag="Note" Click="Mode_Click">
+					<MenuItem.ToolTip>
+						<TextBlock TextWrapping="Wrap" Width="200">
+							<Run FontWeight="Black" Text="Notebook" />
+							<LineBreak /> 
+							<Run>The Notebook is place to take notes and export Text Documents of all kinds. </Run>
+						</TextBlock>
+					</MenuItem.ToolTip>
+				</MenuItem>
+				<MenuItem Header="SketchView" Tag="Sketch" Click="Mode_Click">
+					<MenuItem.ToolTip>
+						<TextBlock TextWrapping="Wrap" Width="200">
+							<Run FontWeight="Black" Text="Sketchbook" />
+							<LineBreak /> 
+							<Run>The Sketch View is desinged to deal with the Sketches and concepts you create. </Run>
+						</TextBlock>
+					</MenuItem.ToolTip>
+				</MenuItem>
+				<MenuItem Tag="Video" Click="Mode_Click" Header="Videobook">
+					<MenuItem.ToolTip>
+						<TextBlock TextWrapping="Wrap" Width="200">
+							<Run FontWeight="Black" Text="Videobook" />
+							<LineBreak /> 
+							<Run>The Videobook is desinged to deal with the setting up Youtube Video's,Livvestreams and Thumbnails.. </Run>
+						</TextBlock>
+					</MenuItem.ToolTip>
+				</MenuItem>
+			</MenuItem>
+			<MenuItem Header="Help">
+				<MenuItem ToolTip="About ABBuilder GP"  Command="w:DesktopCommands.About" />
+			</MenuItem>
+		</Menu>
+
+		<!-- Frame -->
+		<c:ViewFrame x:Name="mainFrame" Grid.Row="1" />
+
+		<!-- Status Bar-->
+		<StatusBar x:Name="statusBar" Grid.Row="2">
+			<TextBlock Text="Status:" />
+			<TextBlock x:Name="tbStatus" />
+		</StatusBar> 
+
+		<!--#region Dialogs -->
+
+		<c:ViewDialog x:Name="newDialog" Grid.Row="1" Grid.RowSpan="2" IsButtonsHidden="True">
+			<Grid>
+				<Grid.RowDefinitions>
+					<RowDefinition Height="auto" />
+					<RowDefinition />
+				</Grid.RowDefinitions>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition />
+					<ColumnDefinition />
+					<ColumnDefinition />
+					<ColumnDefinition />
+				</Grid.ColumnDefinitions>
+				<TextBlock Text="Code" Grid.Column="0" />
+				<WrapPanel Grid.Row="1" Grid.Column="0" >
+					<c:OptionButton Tag="Html" Click="New_Click" Style="{StaticResource optNew}" Content="Html Generator" />
+
+				</WrapPanel>
+				<TextBlock Text="Note" Grid.Column="1" />
+				<WrapPanel Grid.Row="1" Grid.Column="1" >
+					
+				</WrapPanel>
+				<TextBlock Text="Sketch" Grid.Column="2" />
+				<WrapPanel Grid.Row="1" Grid.Column="2" >
+
+				</WrapPanel>
+				<TextBlock Text="Video" Grid.Column="3" />
+				<WrapPanel Grid.Row="1" Grid.Column="3" >
+					<c:OptionButton Click="New_Click" Tag="YouTube" Style="{StaticResource optNew}" Content="Youtube Project" />
+				</WrapPanel>
+
+			</Grid>
+		</c:ViewDialog>
+
+		<c:ViewDialog x:Name="logDialog" Grid.Row="1" Grid.RowSpan="2" IsButtonsHidden="True" >
+			<Grid>
+				<Grid.RowDefinitions>
+					<RowDefinition   />
+					<RowDefinition Height="auto" />
+				</Grid.RowDefinitions>
+			
+
+				<ListBox x:Name="lstRecentFiles" Height="auto" />
+
+
+
+				<c:PushButton x:Name="btnLogOk" Style="{StaticResource pushMedia}" Content="Ok" />
+			</Grid>
+		</c:ViewDialog>
+
+		<!--#endregion-->
+
+	</Grid>
+</local:PowerShell>

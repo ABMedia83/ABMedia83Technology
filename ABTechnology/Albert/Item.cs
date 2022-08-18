@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
+﻿
 namespace Albert
 {
 	/// <summary>
@@ -9,7 +6,7 @@ namespace Albert
 	/// </summary>
 	public abstract class Item: Notify
 	{
-		string name; 
+		string? name; 
 
 		/// <summary>
 		/// Gets or set the name of the property 

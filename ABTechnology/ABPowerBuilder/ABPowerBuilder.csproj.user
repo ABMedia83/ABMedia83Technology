@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <Compile Update="Controls\HtmlBuilderControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Controls\ImageViewer.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Controls\MediaPlayerControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Controls\PDFViewer.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Controls\CodeControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Controls\SketchPadControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Controls\YouTubeControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\CodeBookPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\DocumentsPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\MainShell.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\MediaBookPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\NotebookPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\SketchBook.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\VideoBookPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Controls\HtmlBuilderControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Controls\ImageViewer.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Controls\MediaPlayerControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Controls\PDFViewer.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Controls\CodeControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Controls\SketchPadControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Controls\YouTubeControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\DataTemp.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\Defaults.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\ReStyle.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\UI.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\DocumentsPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\MainShell.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

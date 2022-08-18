@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup />
+  <ItemGroup>
+    <Page Update="Controls\CodeControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Controls\ImageViewer.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Controls\PDFViewer.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Controls\YouTubeControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\DataTemp.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\Defaults.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\ReStyle.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\UI.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\CodeBookPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\MediaBookPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\NotebookPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\SketchBook.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\VideoBookPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

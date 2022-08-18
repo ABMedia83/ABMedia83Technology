@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "dgSpecHash": "yUzrBUFLEjZawcYecdVuTLq+zUtCcoSffzay2XDTpRfUi45lFZig4BtISjgpBstZc3cidN2TDjcrMqCpugvsqg==",
+  "success": true,
+  "projectFilePath": "C:\\AMB\\Git\\ABMedia83Technology\\ABTechnology\\ABMap\\ABMap.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\alxp2\\.nuget\\packages\\microsoft.netcore.platforms\\3.0.0\\microsoft.netcore.platforms.3.0.0.nupkg.sha512",
+    "C:\\Users\\alxp2\\.nuget\\packages\\microsoft.toolkit.ui.xamlhost\\6.1.2\\microsoft.toolkit.ui.xamlhost.6.1.2.nupkg.sha512",
+    "C:\\Users\\alxp2\\.nuget\\packages\\microsoft.toolkit.win32.ui.sdk\\6.1.2\\microsoft.toolkit.win32.ui.sdk.6.1.2.nupkg.sha512",
+    "C:\\Users\\alxp2\\.nuget\\packages\\microsoft.toolkit.win32.ui.xamlapplication\\6.1.2\\microsoft.toolkit.win32.ui.xamlapplication.6.1.2.nupkg.sha512",
+    "C:\\Users\\alxp2\\.nuget\\packages\\microsoft.toolkit.wpf.ui.controls\\6.1.2\\microsoft.toolkit.wpf.ui.controls.6.1.2.nupkg.sha512",
+    "C:\\Users\\alxp2\\.nuget\\packages\\microsoft.toolkit.wpf.ui.xamlhost\\6.1.2\\microsoft.toolkit.wpf.ui.xamlhost.6.1.2.nupkg.sha512",
+    "C:\\Users\\alxp2\\.nuget\\packages\\microsoft.vcrtforwarders.140\\1.0.6\\microsoft.vcrtforwarders.140.1.0.6.nupkg.sha512",
+    "C:\\Users\\alxp2\\.nuget\\packages\\microsoft.windows.sdk.contracts\\10.0.18362.2005\\microsoft.windows.sdk.contracts.10.0.18362.2005.nupkg.sha512",
+    "C:\\Users\\alxp2\\.nuget\\packages\\system.runtime.windowsruntime\\4.6.0\\system.runtime.windowsruntime.4.6.0.nupkg.sha512",
+    "C:\\Users\\alxp2\\.nuget\\packages\\system.runtime.windowsruntime.ui.xaml\\4.6.0\\system.runtime.windowsruntime.ui.xaml.4.6.0.nupkg.sha512",
+    "C:\\Users\\alxp2\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.27\\microsoft.netcore.app.host.win-x64.3.1.27.nupkg.sha512"
+  ],
+  "logs": []
+}

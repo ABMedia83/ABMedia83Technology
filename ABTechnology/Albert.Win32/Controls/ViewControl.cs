@@ -2,12 +2,12 @@
 namespace Albert.Win32.Controls
 {
     /// <summary>
-    /// A special Control design to deal with a Veiw in MVVM  
+    /// A special ContentControl desinged to work with a Tab Interface and the MVVM Pattern
     /// </summary>
     public class ViewControl : ContentControl, IAddCommand
     {
 
-        ViewDialog topDialog;
+        ViewDialog? topDialog;
 
 
         #region Depedency Properties
@@ -53,7 +53,7 @@ namespace Albert.Win32.Controls
         /// <param name="_header"></param>
         /// <param name="_isClosedEnabled"></param>
         /// <param name="_tab"></param>
-        public void TabInit(string _header, bool _isClosedEnabled, TabControl _tab)
+        public void CreateTab(string _header, bool _isClosedEnabled, TabControl _tab)
         {
             //Clean up if page is active 
             if(Page != null)
@@ -72,9 +72,9 @@ namespace Albert.Win32.Controls
         /// Method used to Initialize the TabItem, Load a File, and Setup the Tab Closed method  
         /// </summary>
         /// <param name="_tab">TabItem</param>
-        /// <param name="_fileName">FileName</param>
+        /// <param name="_file  Name">FileName</param>
         /// <param name="__method">Close Method</param>
-        public void TabInit(TabControl _tab, FileInfo _info, Action __method)
+        public void CreateTab(TabControl _tab, FileInfo _info, Action __method)
         {
             if (Page != null)
             {
@@ -104,7 +104,7 @@ namespace Albert.Win32.Controls
         /// <param name="_header"></param>
         /// <param name="_tab"></param>
         /// <param name="_closeMethod"></param>
-        public void TabInit(string _header, TabControl _tab, Action _closeMethod)
+        public void CreateTab(string _header, TabControl _tab, Action _closeMethod)
         {
             if (Page != null)
             {
@@ -180,21 +180,29 @@ namespace Albert.Win32.Controls
             // Do nothing for now 
         }
 
+        public void SetCurrentFilePath(string _filePath)
+        {
+            CurrentFile = _filePath; ;
+            FileInfo = new FileInfo(_filePath);
+
+        }
+
         #endregion
 
         #region Init and Close Override Method's  
         /// <summary>
-        /// An ovveride method designed to be used when the View has multiple Consturctor's
+        /// A virtual Method designed to work with  multiple constructor's 
         /// </summary>
         public virtual void Init()
         {
             // Do nothing for now ment to call with the Constructor's your create 
         }
         /// <summary>
-        /// An override method used to Close when TabItem.Closed is called 
+        /// An virtural method used to Close when TabItem.Closed is called 
         /// </summary>
         public virtual void Close()
         {
+            //Default behavior 
             if(TabItem != null && TabItem != null)
             {
                 //Remove the Tab 

@@ -10,6 +10,8 @@ namespace Albert.Win32
 
         TabControl? tab;
         ViewFrame? frame;
+        ViewModelList<LogRecord> logs = new ViewModelList<LogRecord>();
+        ViewModelList<FileRecord> files = new ViewModelList<FileRecord>();
         string? title;
         WindowState winState; 
         
@@ -28,7 +30,7 @@ namespace Albert.Win32
         /// <summary>
         /// A special event that fire's when you send a Message to the Application 
         /// </summary>
-        public event LogEventHandler OnLog;
+        public event LogEventHandler? OnLog;
 
         /// <summary>
         /// Method is designed to display a Custom Method with the ONLog Event 
@@ -48,18 +50,26 @@ namespace Albert.Win32
             }
 
             //Invoke Event OnLog
-            OnLog.Invoke(_message);
+            OnLog!.Invoke(_message);
         }
 
 
         /// <summary>
         /// Get or set Log Record's 
         /// </summary>
-        public ViewModelList<LogRecord> Logs { get; set; } = new();
+        public ViewModelList<LogRecord> Logs
+        {
+            get => logs;
+            set { logs = value; OnPropertyChanged("Logs"); }
+        }
         /// <summary>
         /// Get or set Files worked on
         /// </summary>
-        public ViewModelList<FileRecord> Files { get; set; } = new();
+        public ViewModelList<FileRecord> Files
+        {
+            get => files;
+            set { files = value; OnPropertyChanged("Files"); }
+        }
             
 
 

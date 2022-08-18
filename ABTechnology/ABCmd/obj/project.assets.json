@@ -1,0 +1,165 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0-windows7.0": {
+      "CliWrap/3.4.4": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.0/CliWrap.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/CliWrap.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Albert/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Albert.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Albert.dll": {}
+        }
+      },
+      "Albert.Win32/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Albert": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Albert.Win32.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Albert.Win32.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
+      }
+    }
+  },
+  "libraries": {
+    "CliWrap/3.4.4": {
+      "sha512": "+lMDilJviKVrrk1vUFpZNYdEYH3aIrVx1t3DRgSOuSKB0JSzxhx2YREL4hXNIAgcHaMi2rXa6UYj8PXcjJCJpQ==",
+      "type": "package",
+      "path": "cliwrap/3.4.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Readme.md",
+        "cliwrap.3.4.4.nupkg.sha512",
+        "cliwrap.nuspec",
+        "favicon.png",
+        "lib/net461/CliWrap.dll",
+        "lib/net461/CliWrap.xml",
+        "lib/netcoreapp3.0/CliWrap.dll",
+        "lib/netcoreapp3.0/CliWrap.xml",
+        "lib/netstandard2.0/CliWrap.dll",
+        "lib/netstandard2.0/CliWrap.xml",
+        "lib/netstandard2.1/CliWrap.dll",
+        "lib/netstandard2.1/CliWrap.xml"
+      ]
+    },
+    "Albert/1.0.0": {
+      "type": "project",
+      "path": "../Albert/Albert.csproj",
+      "msbuildProject": "../Albert/Albert.csproj"
+    },
+    "Albert.Win32/1.0.0": {
+      "type": "project",
+      "path": "../Albert.Win32/Albert.Win32.csproj",
+      "msbuildProject": "../Albert.Win32/Albert.Win32.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0-windows7.0": [
+      "Albert >= 1.0.0",
+      "Albert.Win32 >= 1.0.0",
+      "CliWrap >= 3.4.4"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\alxp2\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\AMB\\Git\\ABMedia83Technology\\ABTechnology\\ABCmd\\ABCmd.csproj",
+      "projectName": "ABCmd",
+      "projectPath": "C:\\AMB\\Git\\ABMedia83Technology\\ABTechnology\\ABCmd\\ABCmd.csproj",
+      "packagesPath": "C:\\Users\\alxp2\\.nuget\\packages\\",
+      "outputPath": "C:\\AMB\\Git\\ABMedia83Technology\\ABTechnology\\ABCmd\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\alxp2\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0-windows"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0-windows7.0": {
+          "targetAlias": "net6.0-windows",
+          "projectReferences": {
+            "C:\\AMB\\Git\\ABMedia83Technology\\ABTechnology\\Albert.Win32\\Albert.Win32.csproj": {
+              "projectPath": "C:\\AMB\\Git\\ABMedia83Technology\\ABTechnology\\Albert.Win32\\Albert.Win32.csproj"
+            },
+            "C:\\AMB\\Git\\ABMedia83Technology\\ABTechnology\\Albert\\Albert.csproj": {
+              "projectPath": "C:\\AMB\\Git\\ABMedia83Technology\\ABTechnology\\Albert\\Albert.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0-windows7.0": {
+        "targetAlias": "net6.0-windows",
+        "dependencies": {
+          "CliWrap": {
+            "target": "Package",
+            "version": "[3.4.4, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

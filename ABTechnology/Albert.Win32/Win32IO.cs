@@ -106,7 +106,7 @@
 
 		#region Ink 
 		/// <summary>
-		/// A process to save ink strokes 
+		/// A Special method for saving Ink Strokes 
 		/// </summary>
 		/// <param name="_ink">Ink Canvas</param>
 		/// <param name="_fn">File Name</param>
@@ -121,7 +121,7 @@
 			
         }
 		/// <summary>
-		/// Load Ink Strokes 
+		/// A Special Method for Loading Ink Strokes 
 		/// </summary>
 		/// <param name="_ink">InkCanvas </param>
 		/// <param name="_fn">File Name</param>
@@ -256,7 +256,7 @@
 
 		#region Bitmap Section 
 		/// <summary>
-		/// Create a .png file 
+		/// Method renders a Png Image File based off a FrameworElement 
 		/// </summary>
 		/// <param name="_fileName"></param>
 		/// <param name="dpi"></param>
@@ -294,7 +294,7 @@
 
 		}
 		/// <summary>
-		/// Create a jpeg file 
+		/// Method creates a Jepg File based off a FrameworkElement 
 		/// </summary>
 		/// <param name="_fileName"></param>
 		/// <param name="dpi"></param>
@@ -329,6 +329,39 @@
             }
 		}
 
+		public static void CreateGif(string _fileName ,int dpi,FrameworkElement element)
+        {
+			//Mesuse and Create the right size of the Element
+			element.Measure(new Size(double.PositiveInfinity, double.PositiveInfinity));
+			element.Arrange(new Rect(new Point(0, 0), element.DesiredSize));
+
+			//Convert width and height to whole pixels
+			var width = (int)Math.Ceiling(element.ActualWidth);
+			var height = (int)Math.Ceiling(element.ActualHeight);
+
+			width = width == 0 ? 1 : width;
+			height = height == 0 ? 1 : height;
+
+			var bitmap = new RenderTargetBitmap(width, height, dpi, dpi, PixelFormats.Default);
+			//Render the Visual 
+			bitmap.Render(element);
+
+			if (_fileName != string.Empty)
+			{
+				using var stream = new FileStream(_fileName, FileMode.Create);
+				//Create a Gif File
+				var encoder = new GifBitmapEncoder();
+
+
+
+				encoder.Frames.Add(BitmapFrame.Create(bitmap));
+				//Save the bitmap 
+				encoder.Save(stream);
+				//Close the stream 
+				stream.Close();
+			}
+		}
+
 
 		public static void CreateTiff(string _fileName, int dpi, FrameworkElement element)
 		{
@@ -350,7 +383,10 @@
 			if (_fileName != string.Empty)
 			{
 				using var stream = new FileStream(_fileName, FileMode.Create);
+				//Create a Tiff File 
 				var encoder = new TiffBitmapEncoder();
+
+				
 
 				encoder.Frames.Add(BitmapFrame.Create(bitmap));
 				//Save the bitmap 
@@ -359,6 +395,12 @@
 				stream.Close();
 			}
 		}
+
+
+
+
+
+
 
 		#endregion
 

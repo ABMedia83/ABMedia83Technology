@@ -1,0 +1,12 @@
+C:\AMB\Git\ABMedia83Technology\ABTechnology\Albert.Data\bin\Debug\net6.0\Albert.Data.deps.json
+C:\AMB\Git\ABMedia83Technology\ABTechnology\Albert.Data\bin\Debug\net6.0\Albert.Data.dll
+C:\AMB\Git\ABMedia83Technology\ABTechnology\Albert.Data\bin\Debug\net6.0\Albert.Data.pdb
+C:\AMB\Git\ABMedia83Technology\ABTechnology\Albert.Data\obj\Debug\net6.0\Albert.Data.csproj.AssemblyReference.cache
+C:\AMB\Git\ABMedia83Technology\ABTechnology\Albert.Data\obj\Debug\net6.0\Albert.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\AMB\Git\ABMedia83Technology\ABTechnology\Albert.Data\obj\Debug\net6.0\Albert.Data.AssemblyInfoInputs.cache
+C:\AMB\Git\ABMedia83Technology\ABTechnology\Albert.Data\obj\Debug\net6.0\Albert.Data.AssemblyInfo.cs
+C:\AMB\Git\ABMedia83Technology\ABTechnology\Albert.Data\obj\Debug\net6.0\Albert.Data.csproj.CoreCompileInputs.cache
+C:\AMB\Git\ABMedia83Technology\ABTechnology\Albert.Data\obj\Debug\net6.0\Albert.Data.dll
+C:\AMB\Git\ABMedia83Technology\ABTechnology\Albert.Data\obj\Debug\net6.0\refint\Albert.Data.dll
+C:\AMB\Git\ABMedia83Technology\ABTechnology\Albert.Data\obj\Debug\net6.0\Albert.Data.pdb
+C:\AMB\Git\ABMedia83Technology\ABTechnology\Albert.Data\obj\Debug\net6.0\ref\Albert.Data.dll

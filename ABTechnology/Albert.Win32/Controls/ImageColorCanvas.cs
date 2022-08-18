@@ -8,7 +8,7 @@ namespace Albert.Win32.Controls
     public class ImageColorCanvas:Image,IAddCommand 
     {
         #region Field's
-        RenderTargetBitmap cachedTargetBitmap;
+        RenderTargetBitmap? cachedTargetBitmap;
         Point position = new Point();
         #endregion
 
@@ -23,6 +23,9 @@ namespace Albert.Win32.Controls
 
         public static readonly DependencyProperty SelectedColorProperty
        = DP("SelectedColor", typeof(Color), typeof(ImageColorCanvas),Colors.Black);
+
+    
+        
 
 
 
@@ -66,7 +69,7 @@ namespace Albert.Win32.Controls
 
         #region Events 
 
-        public event ColorChangedEventHandler OnColorSelected;
+        public event ColorChangedEventHandler? OnColorSelected;
 
         #endregion 
 
@@ -112,6 +115,7 @@ namespace Albert.Win32.Controls
             var color = this.SelectedColor;
             OnColorSelected?.Invoke(color);
 
+     
 
             base.OnPropertyChanged(e);
         }
@@ -308,7 +312,10 @@ namespace Albert.Win32.Controls
                 SetValue(SelectedColorProperty, value);
             }
         }
-        #endregion SelectedColor
+
+
+        
+        #endregion 
 
         #region Selector
         /// <summary>

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
 namespace Albert
 {
@@ -11,7 +7,7 @@ namespace Albert
     /// A special Delegate for creating a Xml Document 
     /// </summary>
     /// <param name="_xElement"></param>
-    public delegate void CreateXmlEventHandler(XElement? _xElement);
+    public delegate void XmlFileEventHandler(XElement? _xElement);
 
 
     /// <summary>
@@ -26,7 +22,7 @@ namespace Albert
         /// </summary>
         /// <param name="_obj"></param>
         /// <param name="_fileName"></param>
-        public static void SaveToJson(object _obj, string _fileName)
+        public static void WriteToJsonFile(object _obj, string _fileName)
         {
             //Convert Object to Json 
             string json = Serialize(_obj);
@@ -34,7 +30,7 @@ namespace Albert
             WriteAllText(_fileName, json);
         }
 
-        public static T LoadJsonToObject<T>(string _fileName)
+        public static T ReadFromJsonFile<T>(string _fileName)
         {
             //Put the Json into a string 
             string json = ReadAllText(_fileName);          
@@ -50,7 +46,7 @@ namespace Albert
         #region Xml Logic 
 
 
-        public static void CreateAndSaveXmlDocument(string _fileName, string _headTag, string _documentTag, CreateXmlEventHandler _method)
+        public static void WriteToXmlDocument(string _fileName, string _headTag, string _documentTag, XmlFileEventHandler _method)
         {
             //Create the Xml Document 
             XElement xml = new XElement(_headTag);
@@ -65,7 +61,7 @@ namespace Albert
             xml.Save(_fileName);
         }
 
-        public static void LoadXmlAndConvert(string _fileName, string _documentTag, CreateXmlEventHandler _method)
+        public static void ReadFromXmlDocument(string _fileName, string _documentTag, XmlFileEventHandler _method)
         {
             var xml = XElement.Load(_fileName);
             var document = xml.Element(_documentTag);

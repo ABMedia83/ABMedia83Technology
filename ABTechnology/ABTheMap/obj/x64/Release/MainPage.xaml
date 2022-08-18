@@ -1,0 +1,27 @@
+﻿<Page
+    x:Class="ABTheMap.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ABTheMap"
+	xmlns:map="using:Windows.UI.Xaml.Controls.Maps"
+	xmlns:c="using:Albert.Runtime"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="auto" />
+			<RowDefinition />
+		</Grid.RowDefinitions>
+
+		<StackPanel Orientation="Horizontal">
+
+
+		</StackPanel>
+		<map:MapControl x:ConnectionId='2' x:Name="map" MapServiceToken="wAMM4VMnrcNBf7IcAEjr~uvXEIaERvBNmx5dKhGMSVw~Ag2rKqGDf3_Y4b3mptpeNg_jrAsM0RJkzDpmiv40wesP-ep1y2Vi_yNXV1bEIu-b"   Style="Aerial3DWithRoads"  Grid.Row="1" />
+
+	</Grid>
+</Page>
+

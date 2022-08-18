@@ -1,0 +1,25 @@
+﻿<UserControl x:ConnectionId='1'
+    x:Class="Albert.Runtime.PDFViewer"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Albert.Runtime"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+
+	<ScrollViewer x:ConnectionId='2'                                           
+                                                               >
+		<ItemsControl x:ConnectionId='3'                                             >
+			<ItemsControl.ItemTemplate>
+				<DataTemplate                         >
+
+					<Image x:ConnectionId='5'                    Margin="0 2" />
+
+				</DataTemplate>
+			</ItemsControl.ItemTemplate>
+		</ItemsControl>
+	</ScrollViewer>
+</UserControl>
+

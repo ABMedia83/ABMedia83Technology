@@ -103,6 +103,7 @@
 							<TextBlock x:Name="PART_tbMessage" Margin="5" TextAlignment="{TemplateBinding TitleAlignment}" Grid.Row="0">
                                 <Run FontWeight="Bold" Text="{TemplateBinding Title}" />
                                 <LineBreak />
+								
                                 <Run Text="{TemplateBinding Message}" />
 							</TextBlock>
 

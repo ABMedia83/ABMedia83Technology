@@ -1,0 +1,43 @@
+﻿<local:PowerView x:Class="Controls.MediaPlayerControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:c="clr-namespace:Albert.Win32.Controls;assembly=Albert.Win32"
+			 xmlns:local="clr-namespace:Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="auto" />
+			<RowDefinition />
+			<RowDefinition Height="auto" />
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition />
+			<ColumnDefinition Width="auto" />
+		</Grid.ColumnDefinitions>
+		<!--Url and Open Button-->
+
+		<!-- Media Eleement-->
+		<c:ZoomBox Grid.Row="1" Margin="-4,0,4,0">
+			<c:MediaPlayback x:Name="mediaPlayer"   />
+		</c:ZoomBox>
+
+		<!-- Play Back Buttons-->
+		<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="2" Grid.ColumnSpan="2">
+			<c:PushButton Tag="FastRewind" FontFamily="Webdings" ToolTip="FastRewind" Content="9" Style="{StaticResource pushMedia}" />
+			<c:PushButton Tag="Rewind"  FontFamily="Webdings" ToolTip="Rewind"  Content="7" Style="{StaticResource pushMedia}" />
+	
+			<c:PushButton Tag="Pause"  FontFamily="Webdings" ToolTip="Pause" Content=";" Style="{StaticResource pushMedia}" />
+
+			<c:PushButton Tag="Play"  FontFamily="Webdings" ToolTip="Play" Content="4" Style="{StaticResource pushMedia}" />
+
+			<c:PushButton Tag="Stop"  FontFamily="Webdings" ToolTip="Stop" Content="g" Style="{StaticResource pushMedia}" />
+			<c:PushButton Tag="Forward" FontFamily="Webdings" ToolTip="Forward" Content="8" Style="{StaticResource pushMedia}" />
+			<c:PushButton Tag="FastForward" FontFamily="Webdings" ToolTip="FastForward" Content=":" Style="{StaticResource pushMedia}" />
+		</StackPanel>
+
+
+	</Grid>
+</local:PowerView>

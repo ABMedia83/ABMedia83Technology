@@ -6,7 +6,7 @@ namespace Albert
     /// </summary>
     public abstract class Notify: INotifyPropertyChanged
     {
-        public event PropertyChangedEventHandler PropertyChanged;
+        public event PropertyChangedEventHandler? PropertyChanged;
 
 
         /// <summary>

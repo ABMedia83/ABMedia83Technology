@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "8nM1dV+nXESTivH1GVzzER1OBrwhb4wlu1EIa43tQX7gdJZisluGLvh05+8ZULiYMB45B91f29U7QBePcAnVHw==",
+  "success": true,
+  "projectFilePath": "C:\\AMB\\Git\\ABMedia83Technology\\ABTechnology\\ABCmd\\ABCmd.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\alxp2\\.nuget\\packages\\cliwrap\\3.4.4\\cliwrap.3.4.4.nupkg.sha512"
+  ],
+  "logs": []
+}
